@@ -11,7 +11,7 @@ MYSQL CONNECTOR
 ### Requerimientos
 
 1.- LINUX
-	
+
 * MariaDB
 * PHPMYADMIN
 * Apache2
