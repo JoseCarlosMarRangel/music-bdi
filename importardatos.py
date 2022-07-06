@@ -19,9 +19,9 @@ try:
         record = cursor.fetchone()
         # Te informa que esta conectado a l base de datos específica
         print("Estas conectado a la base de datos: ", record)
-        #loop through the data frame
+        #loop Encargado para leer iterar los datos de acuerdo a las filas y columnas
         for i,row in empdata.iterrows():
-            #here %S means string values 
+            #El %S significa que tomará los strings de cada valor
             sql = "INSERT INTO spotify VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
             cursor.execute(sql, tuple(row))
             conn.commit()
