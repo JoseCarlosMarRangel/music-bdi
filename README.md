@@ -18,6 +18,7 @@ MYSQL CONNECTOR
 * UFW firewall
 * Navegador web(firefox,chrome,etc)
 * mysql conector de python3
+* mysqlclient de pip
 * pandas
 
 2.- WINDOWS
@@ -27,4 +28,5 @@ MYSQL CONNECTOR
 * PHP7.4.25
 * Navegador web(firefox,chrome,etc)
 * mysql conector de python3
+* mysqlclient de pip
 * pandas
