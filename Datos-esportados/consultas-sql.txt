@@ -1,0 +1,36 @@
+
+// Obtiene el valor máximo de reproducciones de la tabla sin importar el año
+SELECT * FROM spotify WHERE reproducciones = (SELECT MAX(reproducciones) FROM spotify); 
+
+
+// Orden de mayor a menor por reproducciones
+select * from spotify where reproducciones order by reproducciones DESC;
+
+// Ordena las reproducciones de mayor a menor de entre las fechas que le pidas
+//Ejemplo: SELECT * FROM spotify WHERE ano BETWEEN '2020' AND '2022' order by reproducciones DESC;
+
+######################################
+######## Preguntas del NOTION ########
+######################################
+
+// ¿Cuál es la disquera con más canciones entre el 2020 y 2022?
+SELECT disquera, COUNT(disquera) AS canciones
+FROM  spotify WHERE ano BETWEEN '2020' AND '2022'
+GROUP BY disquera
+ORDER BY canciones DESC 
+
+// ¿Cuál es la canción con más reproducciones en spotify entre el 2020 y 2022?
+SELECT nom_cancion, reproducciones FROM spotify WHERE ano 
+BETWEEN '2020' AND '2022' ORDER BY reproducciones DESC; 
+
+// ¿Cuál es la canción con más reproducciones en youtube entre el 2020 y 2022?
+SELECT nom_cancion, reproducciones FROM youtube WHERE ano 
+BETWEEN '2020' AND '2022' ORDER BY reproducciones DESC; 
+
+// ¿Cuál fue el artista más popular entre los tiempos 2020 y 2022 en youtube?
+SELECT nom_artista, reproducciones FROM youtube WHERE ano 
+BETWEEN '2020' AND '2022' ORDER BY reproducciones DESC;
+
+// ¿Cuál fue el artista más popular entre los tiempos 2020 y 2022 en spotify?
+SELECT nom_artista, reproducciones FROM spotify WHERE ano 
+BETWEEN '2020' AND '2022' ORDER BY reproducciones DESC;
