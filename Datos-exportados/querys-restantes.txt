@@ -1,4 +1,4 @@
-Cuantas reprodicciones tiene en Youtube la cancion mas escuchada de Spotify en el 2022
+1.- Cuantas reproducciones tiene en Youtube la cancion mas escuchada de Spotify en el 2022
 
 // Cancion con más reproduciones en spotify
 SELECT nom_cancion,max(reproducciones) FROM spotify WHERE ano = 2022;
@@ -12,7 +12,7 @@ FROM youtube
 WHERE nom_cancion = 'Me Porto Bonito';
 
 
-Cuantas reprodicciones tiene en Spotify la cancion mas escuchada de YoubTube en el 2022
+2.- Cuantas reproducciones tiene en Spotify la cancion mas escuchada de YoubTube en el 2022
 
 // Cancion con más reproduciones en youtube
 SELECT nom_cancion,max(reproducciones) FROM youtube WHERE ano = 2022;
@@ -25,19 +25,19 @@ SELECT nom_cancion, reproducciones
 FROM spotify
 WHERE nom_cancion = 'Te Felicito';
 
-Cuantas repoducciones tiene BadBunny en Youtube desde el 2020 al 2022
+3.- Cuantas repoducciones tiene BadBunny en Youtube desde el 2020 al 2022
 
 SELECT nom_artista,SUM(reproducciones)
 FROM spotify
 WHERE nom_artista = 'Bad Bunny' AND ano BETWEEN '2020' AND '2022';
 
-Cuantas repoducciones tiene BadBunny en Spotify desde el 2020 al 2022
+4.- Cuantas repoducciones tiene BadBunny en Spotify desde el 2020 al 2022
 
 SELECT nom_artista,SUM(reproducciones)
 FROM youtube
 WHERE nom_artista = 'Bad Bunny' AND ano BETWEEN '2020' AND '2022';
 
-Cual es la disquera con mas reprodicciones en 2020,2021 y 2022 en youtube y spotify?
+5.- Cual es la disquera con mas reproducciones en 2020,2021 y 2022 en youtube y spotify?
 
 SELECT disquera,SUM(reproducciones)
 FROM youtube
