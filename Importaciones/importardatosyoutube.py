@@ -4,14 +4,14 @@ import pandas as pd
 
 # Se carga a una data el archivo csv delimitdo por comas y se hace una omisió del titulo 
 # tcon skiprows
-empdata = pd.read_csv('Youtube-2020.csv', 
+empdata = pd.read_csv('Youtube-2022.csv', 
 	index_col=False, delimiter = ',',header=None, skiprows=1)
 empdata.head()
 
 try:
     # Se intenta la conexión al servidor de base de datos
     conn = msql.connect(host='localhost', database='music-bdi', 
-        user='paralax', password='123')
+        user='ghost', password='123')
     # Si hay conexion crea un corsor para hacer acciones de sql
     if conn.is_connected():
         cursor = conn.cursor()
@@ -26,6 +26,6 @@ try:
             sql = "INSERT INTO youtube VALUES (%s,%s,%s,%s,%s,%s)"
             cursor.execute(sql, tuple(row))
             conn.commit()
-        print("Datos Insertados del 2020")
+        print("Datos Insertados del 2022")
 except Error as e:
             print("Error al conectar con MySQL o la base de datos", e)

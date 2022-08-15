@@ -10,7 +10,7 @@ empdata.head()
 
 try:
     # Se intenta la conexión al servidor de base de datos
-    conn = msql.connect(host='localhost', database='pruebacsv', user='paralax', password='123')
+    conn = msql.connect(host='localhost', database='pruebacsv', user='ghost', password='123')
     # Si hay conexion crea un corsor para hacer acciones de sql
     if conn.is_connected():
         cursor = conn.cursor()
